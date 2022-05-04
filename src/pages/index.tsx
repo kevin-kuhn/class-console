@@ -1,11 +1,15 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage, GetServerSideProps } from 'next'
 
 const Home: NextPage = () => {
-  return (
-    <div>Oi</div>
-  )
+  return <></>
 }
 
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/class/1',
+      permanent: true
+    }
+  }
+}
 export default Home
