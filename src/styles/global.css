@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body, #__next {
+	height: 100%;
+	min-width: 100%;
+}
+
+:root {
+	--color-primary: #B92F30;
+	--color-secondary: #EFEEE0;
+	--color-white: #FFFFFF;
+	--color-grey: #3A3B3C;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: Roboto, sans-serif;
+	color: var(--color-grey);
+}
+
+button {
+	cursor: pointer;
+}

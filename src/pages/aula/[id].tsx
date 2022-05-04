@@ -1,11 +1,9 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+
+import { Layout } from '../../components'
 
 const Class: NextPage = () => {
-  return (
-    <div>Oi class</div>
-  )
+  return <Layout classItems={<p>teste</p>} meta={{ title: 'trsr', description: "fdsfs" }}>Oi class</Layout>
 }
 
 export default Class
