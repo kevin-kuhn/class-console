@@ -7,7 +7,7 @@ export interface IMeta {
 export interface IPrimaryChildren {
   type: string
   title: string
-  description: string
+  slug: string
 }
 
 export interface IResult {

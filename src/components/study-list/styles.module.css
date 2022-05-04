@@ -1,0 +1,11 @@
+.ul {
+	list-style: none;
+}
+
+.li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 16px;
+	gap: 8px;
+}

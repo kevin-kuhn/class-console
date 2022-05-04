@@ -1,16 +1,17 @@
 import Head from 'next/head'
 
-import { IMeta } from '../../models'
+import { IMeta, IPrimaryChildren } from '../../models'
+import { StudyList } from '../index'
 
 import styles from './styles.module.css'
 
 interface Props {
   meta: IMeta
-  classItems: React.ReactNode
+  studyList: IPrimaryChildren[]
   children: React.ReactNode
 }
 
-const Layout: React.FC<Props> = ({ meta, classItems, children }) => {
+const Layout: React.FC<Props> = ({ meta, studyList, children }) => {
   return (
     <>
       <Head>
@@ -19,7 +20,9 @@ const Layout: React.FC<Props> = ({ meta, classItems, children }) => {
       </Head>
       <header className={styles.header}> COLOCAR ICONE ALEATORIO AQUI </header>
       <section className={styles.section}>
-        <aside className={styles.aside}>{classItems}</aside>
+        <aside className={styles.aside}>
+          <StudyList items={studyList} />
+        </aside>
         <main className={styles.main}>{children}</main>
       </section>
     </>

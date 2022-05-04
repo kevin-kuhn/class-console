@@ -1,26 +1,29 @@
 .header {
   display: flex;
+  align-items: center;
   width: 100%;
-  padding: 30px;
-	background-color: var(--color-primary);
+  padding: 0 25px;
+  height: 70px;
+  background-color: var(--color-primary);
 }
 
 .section {
   display: flex;
-  height: 100%;
+  height: calc(100% - 70px);
 }
 
 .aside,
 .main {
-  padding: 8px;
   height: 100%;
 }
 
 .aside {
   flex: 1;
+  padding: 8px 0;
   border-right: 1px solid var(--color-grey);
 }
 
 .main {
+  padding: 8px;
   flex: 3;
 }
