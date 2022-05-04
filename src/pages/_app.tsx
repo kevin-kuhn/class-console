@@ -1,7 +1,13 @@
 import type { AppProps } from 'next/app'
 
+import { ClassProvider } from '../contexts/ClassContext'
+
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ClassProvider>
+      <Component {...pageProps} />
+    </ClassProvider>
+  )
 }
 
 export default MyApp
