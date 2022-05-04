@@ -7,7 +7,7 @@ const Home: NextPage = () => {
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-      destination: '/class/1',
+      destination: '/aula/1',
       permanent: true
     }
   }
