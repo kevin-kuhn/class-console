@@ -1,10 +1,10 @@
-import type { NextPage, GetServerSideProps } from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 
 const Home: NextPage = () => {
   return <></>
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     redirect: {
       destination: '/aula/1',
@@ -12,4 +12,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
     }
   }
 }
+
 export default Home

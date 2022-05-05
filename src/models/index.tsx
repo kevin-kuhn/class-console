@@ -47,15 +47,7 @@ export interface IContentChildren {
 }
 
 // FULL RESPONSE
-export interface IPagination {
-  currentPage: number
-	totalPages: number
-	itemsPerPage: number
-	totalItems: number
-}
-
 export interface IResponse {
 	meta: IMeta
 	result: IResult
-	pagination: IPagination | null
 }

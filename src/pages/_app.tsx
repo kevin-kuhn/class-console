@@ -1,14 +1,29 @@
 import type { AppProps } from 'next/app'
 
+import { SWRConfig } from 'swr'
+import axios from 'axios'
+
 import '../styles/global.css'
 
 import { ClassProvider } from '../contexts/ClassContext'
 
+const api = axios.create({
+  baseURL: 'https://bff-qa.mesalva.com/json/pages/'
+})
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ClassProvider>
-      <Component {...pageProps} />
-    </ClassProvider>
+    <SWRConfig
+      value={{
+        refreshInterval: 3000,
+        fallback: pageProps.fallback,
+        fetcher: url => api.get(url).then(res => res.data)
+      }}
+    >
+      <ClassProvider pageId={pageProps.id}>
+        <Component {...pageProps} />
+      </ClassProvider>
+    </SWRConfig>
   )
 }
 
