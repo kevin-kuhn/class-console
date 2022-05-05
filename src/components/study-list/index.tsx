@@ -11,7 +11,10 @@ const StudyList: React.FC<Props> = ({ items }) => {
     <ul className={styles.ul}>
       {items.map(item => (
         <li key={item.title} className={styles.li}>
-          {item.title}
+          <p className={styles.p}>
+            <span className={styles.icon}>X</span>
+            <span>{item.title}</span>
+          </p>
         </li>
       ))}
     </ul>
