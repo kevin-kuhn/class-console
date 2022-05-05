@@ -1,19 +1,21 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body, #__next {
-	height: 100%;
-	min-width: 100%;
+html,
+body,
+#__next {
+  height: 100%;
+  min-width: 100%;
 }
 
 :root {
-	--color-primary: #B92F30;
-	--color-secondary: #EFEEE0;
-	--color-white: #FFFFFF;
-	--color-grey: #3A3B3C;
+  --color-primary: #b92f30;
+  --color-secondary: #efeee0;
+  --color-white: #ffffff;
+  --color-grey: #3a3b3c;
 }
 
 h1,
@@ -22,11 +24,14 @@ h3,
 h4,
 h5,
 h6,
-p {
-	font-family: Roboto, sans-serif;
-	color: var(--color-grey);
+p,
+input,
+button,
+textarea {
+  font: 400 16px 'Roboto', sans-serif;
+  color: var(--color-grey);
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
