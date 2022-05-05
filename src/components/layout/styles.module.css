@@ -7,6 +7,12 @@
   background-color: var(--color-primary);
 }
 
+.header span {
+	width: 32px;
+	height: 32px;
+	color: var(--color-white);
+}
+
 .section {
   display: flex;
   height: calc(100% - 70px);

@@ -10,6 +10,7 @@ interface Props {
 }
 
 export const ClassProvider: React.FC<Props> = ({ children }) => {
+	
   return (
     <ClassContext.Provider value={{}}>
       {children}

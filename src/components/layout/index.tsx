@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { IMeta, IPrimaryChildren } from '../../models'
 import { StudyList } from '../index'
+import { AcademicIcon } from '../icons'
 
 import styles from './styles.module.css'
 
@@ -18,7 +19,9 @@ const Layout: React.FC<Props> = ({ meta, studyList, children }) => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Head>
-      <header className={styles.header}> COLOCAR ICONE ALEATORIO AQUI </header>
+      <header className={styles.header}>
+        <span><AcademicIcon size={32} /></span>
+      </header>
       <section className={styles.section}>
         <aside className={styles.aside}>
           <StudyList items={studyList} />

@@ -1,4 +1,4 @@
-export const VideoIcon = (size: number = 20) => (
+export const VideoIcon = ({ size = 20 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}
@@ -16,7 +16,7 @@ export const VideoIcon = (size: number = 20) => (
   </svg>
 )
 
-export const TextIcon = (size: number = 20) => (
+export const TextIcon = ({ size = 20 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}
@@ -34,7 +34,7 @@ export const TextIcon = (size: number = 20) => (
   </svg>
 )
 
-export const HamburguerIcon = (size: number = 20) => (
+export const HamburguerIcon = ({ size = 20 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}
@@ -52,7 +52,7 @@ export const HamburguerIcon = (size: number = 20) => (
   </svg>
 )
 
-export const CloseIcon = (size: number = 20) => (
+export const CloseIcon = ({ size = 20 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}
@@ -70,7 +70,7 @@ export const CloseIcon = (size: number = 20) => (
   </svg>
 )
 
-export const CheckIcon = (size: number = 20) => (
+export const CheckIcon = ({ size = 20 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}
@@ -84,7 +84,7 @@ export const CheckIcon = (size: number = 20) => (
   </svg>
 )
 
-export const ExerciseIcon = (size: number = 20) => (
+export const ExerciseIcon = ({ size = 20 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}
@@ -102,7 +102,7 @@ export const ExerciseIcon = (size: number = 20) => (
   </svg>
 )
 
-export const AcademicIcon = (size: number = 20) => (
+export const AcademicIcon = ({ size = 20 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}
