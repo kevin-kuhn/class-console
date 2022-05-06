@@ -9,7 +9,7 @@ interface ContextProps {
   currentStudy: IPrimaryChildren | null
   meta: IMeta | null
   studyList: IPrimaryChildren[]
-  isStudyDone: (title: string) => void
+  isStudyDone: (title: string) => boolean
   handleOnDoneStudy: (title: string) => void
   handleCurrentStudy: (title: string) => void
 }

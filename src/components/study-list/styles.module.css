@@ -5,8 +5,15 @@
 .li {
   display: flex;
   align-items: center;
+	justify-content: space-between;
   padding: 16px 25px;
   cursor: pointer;
+	gap: 8px;
+}
+
+.li.icon {
+	height: 20px;
+	width: 20px;
 }
 
 .li:hover {

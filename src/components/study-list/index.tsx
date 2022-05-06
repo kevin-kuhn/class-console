@@ -3,6 +3,7 @@ import { useClass } from '../../contexts/ClassContext'
 import { useStudyListIcons } from '../../hooks/useStudyListIcons'
 
 import { IPrimaryChildren } from '../../models'
+import { CheckIcon } from '../icons'
 
 import styles from './styles.module.css'
 
@@ -12,7 +13,7 @@ interface Props {
 
 const StudyList: React.FC<Props> = ({ items }) => {
   const { RESOLVE_ICONS } = useStudyListIcons()
-  const { currentStudy, handleCurrentStudy } = useClass()
+  const { currentStudy, handleCurrentStudy, isStudyDone } = useClass()
 
   return (
     <ul className={styles.ul}>
@@ -31,6 +32,11 @@ const StudyList: React.FC<Props> = ({ items }) => {
             </span>
             <span>{item.title}</span>
           </p>
+          {isStudyDone(item.title) ? (
+            <span className="icon">
+              <CheckIcon />
+            </span>
+          ) : null}
         </li>
       ))}
     </ul>
