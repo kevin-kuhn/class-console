@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect } from 'react'
 import { useClass } from '../../contexts/ClassContext'
 import { useStudyListIcons } from '../../hooks/useStudyListIcons'
 

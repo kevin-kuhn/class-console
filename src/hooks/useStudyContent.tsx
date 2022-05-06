@@ -7,15 +7,15 @@ interface Props {
 
 export const useStudyContent = ({ slug }: Props) => {
   const { data, error } = useSWR(
-     () => '/desafio-mesalva-web/' + slug
+    slug ? () => '/desafio-mesalva-web/' + slug : null
   )
 
-	const children = (data?.result.children as IContentChildren[]) ?? []
+  const children = (data?.result.children as IContentChildren[]) ?? []
 
   return {
-		title: data?.result.title,
-		studyType: data?.result.type,
-		studyDescription: data?.result.description,
+    title: data?.result.title,
+    studyType: data?.result.type,
+    studyDescription: data?.result.description,
     data: children,
     error: error,
     isLoading: !data && !error

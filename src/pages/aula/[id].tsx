@@ -11,7 +11,7 @@ const Class: NextPage = () => {
 
   return (
     <Layout studyList={studyList} meta={meta}>
-      <StudyContent />
+      <StudyContent studyItemDefault={studyList[0]} />
     </Layout>
   )
 }

@@ -9,16 +9,20 @@ import PdfContent from './pdf-content'
 import VideoContent from './video-content'
 import ExerciseContent from './exercise-content'
 
-import { IExercice, IPdf, IText, IVideo } from '../../models'
+import { IExercice, IPdf, IPrimaryChildren, IText, IVideo } from '../../models'
 
 import { Loader } from '../icons'
 import { useEffect } from 'react'
 
-const StudyContent: React.FC = () => {
+interface Props {
+  studyItemDefault: IPrimaryChildren
+}
+
+const StudyContent: React.FC<Props> = ({ studyItemDefault }) => {
   const { currentStudy, handleOnDoneStudy } = useClass()
   const { data, title, studyType, isLoading, studyDescription } =
     useStudyContent({
-      slug: currentStudy?.slug ?? null
+      slug: currentStudy?.slug ?? studyItemDefault.slug
     })
 
   useEffect(() => {
