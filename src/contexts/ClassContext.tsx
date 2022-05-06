@@ -1,7 +1,6 @@
 import { createContext, useContext } from 'react'
 import useSWR from 'swr'
 
-
 import { IMeta, IPrimaryChildren, IResponse } from '../models'
 
 import { useLocalStorage } from '../hooks/useLocalStorage'

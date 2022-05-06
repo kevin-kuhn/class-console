@@ -1,18 +1,17 @@
-import axios from 'axios'
 import type { GetServerSideProps, NextPage } from 'next'
 
+import axios from 'axios'
 import { unstable_serialize } from 'swr'
 
-import { Layout } from '../../components'
+import { Layout, StudyContent } from '../../components'
 import { useClass } from '../../contexts/ClassContext'
-import { IPrimaryChildren, IResponse } from '../../models'
 
 const Class: NextPage = () => {
   const { studyList, meta } = useClass()
 
   return (
     <Layout studyList={studyList} meta={meta}>
-      Oi class
+      <StudyContent />
     </Layout>
   )
 }

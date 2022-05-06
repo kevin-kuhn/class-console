@@ -2,11 +2,13 @@ import useSWR from 'swr'
 import { IResponse } from '../models'
 
 interface Props {
-  slug: string
+  slug: string | null
 }
 
 export const useStudyContent = ({ slug }: Props) => {
-  const { data, error } = useSWR(() => '/desafio-mesalva-web/' + slug)
+  const { data, error } = useSWR(
+     () => '/desafio-mesalva-web/' + slug
+  )
 
   return {
     data: data as IResponse,

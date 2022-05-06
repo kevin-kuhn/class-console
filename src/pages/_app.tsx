@@ -15,9 +15,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <SWRConfig
       value={{
-        refreshInterval: 3000,
         fallback: pageProps.fallback,
-        fetcher: url => api.get(url).then(res => res.data)
+        fetcher: url => api.get(url).then(res => res.data),
+        revalidateIfStale: false,
+        revalidateOnFocus: true,
+        revalidateOnReconnect: false
       }}
     >
       <ClassProvider pageId={pageProps.id}>
