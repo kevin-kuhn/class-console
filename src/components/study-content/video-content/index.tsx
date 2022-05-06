@@ -3,6 +3,7 @@ import { IVideo } from '../../../models'
 
 interface Props {
   result: IVideo
+  handleOnDoneStudy: () => void
 }
 
 interface PlayerProps {
@@ -25,12 +26,19 @@ const YoutubePlayer: React.FC<PlayerProps> = ({ link }) => {
   )
 }
 
-const VideoContent: React.FC<Props> = ({ result }) => {
+const VideoContent: React.FC<Props> = ({ result, handleOnDoneStudy }) => {
   const RESOLVE_PROVIDER = {
-    [PlayerProvider.YOUTUBE]: () => <YoutubePlayer link={result.link} />
+    [PlayerProvider.YOUTUBE]: () => (
+      <YoutubePlayer link={result.link} />
+    )
   }
-	
-  return <div>{(RESOLVE_PROVIDER as any)[result.provider]()}</div>
+
+  return (
+    <div onMouseLeave={handleOnDoneStudy}>
+      {(RESOLVE_PROVIDER as any)[result.provider]() ??
+        (RESOLVE_PROVIDER as any)[PlayerProvider.YOUTUBE]()}
+    </div>
+  )
 }
 
 export default VideoContent

@@ -11,31 +11,46 @@ import ExerciseContent from './exercise-content'
 
 import { IExercice, IPdf, IText, IVideo } from '../../models'
 
+import { Loader } from '../icons'
+import { useEffect } from 'react'
+
 const StudyContent: React.FC = () => {
-  const { currentStudy } = useClass()
-  const { data, title, isLoading } = useStudyContent({
+  const { currentStudy, handleOnDoneStudy } = useClass()
+  const { data, title, studyType, isLoading } = useStudyContent({
     slug: currentStudy?.slug ?? null
   })
 
+  useEffect(() => {
+    studyType === StudyListContentType.TEXT && handleOnDoneStudy(title)
+  }, [studyType])
+
+  const handleDoneStudy = () => {
+    handleOnDoneStudy(title)
+  }
+
+  const GLOBAL_PROPS = {
+    handleOnDoneStudy: handleDoneStudy
+  }
+
   const RESOLVE_CONTENT = {
     [StudyListContentType.TEXT]: (result: IText) => (
-      <TextContent result={result} />
+      <TextContent result={result} {...GLOBAL_PROPS} />
     ),
     [StudyListContentType.PDF]: (result: IPdf) => (
-      <PdfContent result={result} />
+      <PdfContent result={result} {...GLOBAL_PROPS} />
     ),
     [StudyListContentType.VIDEO]: (result: IVideo) => (
-      <VideoContent result={result} />
+      <VideoContent result={result} {...GLOBAL_PROPS} />
     ),
     [StudyListContentType.EXERCISE]: (result: IExercice) => (
-      <ExerciseContent result={result} />
+      <ExerciseContent result={result} {...GLOBAL_PROPS} />
     )
   }
 
   return (
     <div className={styles.wrapper}>
       {isLoading ? (
-        <p>Loading...</p>
+        <Loader />
       ) : (
         <div className={styles.content}>
           <h1 className={styles.h1}>{title}</h1>

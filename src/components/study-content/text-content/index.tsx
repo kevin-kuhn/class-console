@@ -6,6 +6,7 @@ import styles from './styles.module.css'
 
 interface Props {
   result: IText
+	handleOnDoneStudy: () => void
 }
 
 const TextContent: React.FC<Props> = ({ result }) => {

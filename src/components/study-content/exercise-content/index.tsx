@@ -2,6 +2,7 @@ import { IExercice } from "../../../models"
 
 interface Props {
 	result: IExercice
+	handleOnDoneStudy: () => void
 }
 
 const ExerciseContent: React.FC<Props> = ({ result }) => {
