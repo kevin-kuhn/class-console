@@ -17,8 +17,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       value={{
         fallback: pageProps.fallback,
         fetcher: url => api.get(url).then(res => res.data),
-        revalidateIfStale: false,
-        revalidateOnFocus: true,
+        revalidateIfStale: true,
+        revalidateOnFocus: false,
         revalidateOnReconnect: false
       }}
     >
