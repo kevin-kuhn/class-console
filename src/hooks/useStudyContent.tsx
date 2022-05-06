@@ -15,6 +15,7 @@ export const useStudyContent = ({ slug }: Props) => {
   return {
 		title: data?.result.title,
 		studyType: data?.result.type,
+		studyDescription: data?.result.description,
     data: children,
     error: error,
     isLoading: !data && !error

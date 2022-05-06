@@ -1,6 +1,8 @@
 import { PlayerProvider } from '../../../enums/player-provider'
 import { IVideo } from '../../../models'
 
+import styles from './styles.module.css'
+
 interface Props {
   result: IVideo
   handleOnDoneStudy: () => void
@@ -28,13 +30,11 @@ const YoutubePlayer: React.FC<PlayerProps> = ({ link }) => {
 
 const VideoContent: React.FC<Props> = ({ result, handleOnDoneStudy }) => {
   const RESOLVE_PROVIDER = {
-    [PlayerProvider.YOUTUBE]: () => (
-      <YoutubePlayer link={result.link} />
-    )
+    [PlayerProvider.YOUTUBE]: () => <YoutubePlayer link={result.link} />
   }
 
   return (
-    <div onMouseLeave={handleOnDoneStudy}>
+    <div className={styles.wrapper} onMouseLeave={handleOnDoneStudy}>
       {(RESOLVE_PROVIDER as any)[result.provider]() ??
         (RESOLVE_PROVIDER as any)[PlayerProvider.YOUTUBE]()}
     </div>

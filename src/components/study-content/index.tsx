@@ -16,9 +16,10 @@ import { useEffect } from 'react'
 
 const StudyContent: React.FC = () => {
   const { currentStudy, handleOnDoneStudy } = useClass()
-  const { data, title, studyType, isLoading } = useStudyContent({
-    slug: currentStudy?.slug ?? null
-  })
+  const { data, title, studyType, isLoading, studyDescription } =
+    useStudyContent({
+      slug: currentStudy?.slug ?? null
+    })
 
   useEffect(() => {
     studyType === StudyListContentType.TEXT && handleOnDoneStudy(title)
@@ -43,7 +44,7 @@ const StudyContent: React.FC = () => {
       <VideoContent result={result} {...GLOBAL_PROPS} />
     ),
     [StudyListContentType.EXERCISE]: (result: IExercice) => (
-      <ExerciseContent result={result} {...GLOBAL_PROPS} />
+      <ExerciseContent result={result} title={title} {...GLOBAL_PROPS} />
     )
   }
 
@@ -54,6 +55,7 @@ const StudyContent: React.FC = () => {
       ) : (
         <div className={styles.content}>
           <h1 className={styles.h1}>{title}</h1>
+          <h2 className={styles.h2}>{studyDescription}</h2>
           <ul className={styles.ul}>
             {data.map((item, index) => (
               <li key={index}>

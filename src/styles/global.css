@@ -29,6 +29,7 @@ input,
 button,
 li,
 a,
+label,
 textarea {
   font: 400 16px 'Roboto', sans-serif;
   color: var(--color-grey);

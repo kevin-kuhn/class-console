@@ -1,0 +1,37 @@
+.wrapper {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.ul {
+	width: 100%;
+	list-style: none;
+}
+
+.ul li {
+	margin: 4px 0;
+	
+}
+
+.ul li label {
+	cursor: pointer;
+	padding-left: 8px;
+}
+
+.button {
+	padding: 12px;
+	color: var(--color-white);
+	background-color: var(--color-primary);
+	border: none;
+	width: 200px;
+}
+
+.correct {
+	color: green;
+}
+
+.incorrect {
+	color: red;
+}
