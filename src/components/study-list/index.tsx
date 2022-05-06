@@ -27,7 +27,7 @@ const StudyList: React.FC<Props> = ({ items }) => {
         >
           <p className={styles.p}>
             <span className={styles.icon}>
-              {RESOLVE_ICONS[item.type] ?? RESOLVE_ICONS['text']}
+              {RESOLVE_ICONS[item.type]() ?? RESOLVE_ICONS['text']()}
             </span>
             <span>{item.title}</span>
           </p>

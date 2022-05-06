@@ -27,9 +27,20 @@ h6,
 p,
 input,
 button,
+li,
+a,
 textarea {
   font: 400 16px 'Roboto', sans-serif;
   color: var(--color-grey);
+}
+
+a {
+	font-weight: 600;
+  text-decoration-color: var(--color-grey);
+}
+
+p {
+  margin: 4px 0;
 }
 
 button {

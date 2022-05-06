@@ -25,6 +25,12 @@ export interface IVideo {
   durationInMinutes: number
 }
 
+export interface IPdf {
+  title: string
+  description: string
+  link: string
+}
+
 export interface IText {
   title: string
   html: string
