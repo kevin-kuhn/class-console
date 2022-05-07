@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <SWRConfig
       value={{
-        fallback: pageProps.fallback,
+        fallback: pageProps.fallback ?? {},
         fetcher: url => api.get(url).then(res => res.data),
         revalidateIfStale: true,
         revalidateOnFocus: false,

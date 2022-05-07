@@ -14,6 +14,7 @@ const PdfContent: React.FC<Props> = ({ result, handleOnDoneStudy }) => {
       href={result.link}
       target="_blank"
       onClick={handleOnDoneStudy}
+			rel="noreferrer"
     >
       Acesse o conteúdo
     </a>
