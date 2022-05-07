@@ -44,6 +44,11 @@ p {
   margin: 4px 0;
 }
 
+i {
+	white-space: normal;
+	display: none;
+}
+
 button {
   cursor: pointer;
 }

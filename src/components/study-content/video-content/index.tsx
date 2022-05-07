@@ -17,8 +17,7 @@ const YoutubePlayer: React.FC<PlayerProps> = ({ link }) => {
 
   return (
     <iframe
-      width="560"
-      height="315"
+			className={styles.iframe}
       src={formattedLink}
       title="YouTube video player"
       frameBorder="0"

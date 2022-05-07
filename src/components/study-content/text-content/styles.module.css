@@ -6,3 +6,20 @@
 	text-indent: 32px;
 	margin: 8px 0;
 }
+
+.wrapper span img {
+	width: 560px;
+
+}
+
+@media (max-width: 1024px) {
+  .wrapper span img {
+    width: 360px;
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper span img {
+    width: 260px;
+  }
+}

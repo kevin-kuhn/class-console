@@ -1,6 +1,7 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 0 25px;
   height: 70px;
@@ -8,9 +9,9 @@
 }
 
 .header span {
-	width: 32px;
-	height: 32px;
-	color: var(--color-white);
+  width: 32px;
+  height: 32px;
+  color: var(--color-white);
 }
 
 .section {
@@ -26,9 +27,37 @@
 .aside {
   flex: 1;
   box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.41) inset;
+  transition: all 0.3s ease;
 }
 
 .main {
   padding: 8px;
   flex: 3;
+}
+
+.hamburguer {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hamburguer {
+    display: block;
+  }
+
+  .aside {
+    position: absolute;
+    width: 100%;
+		height: calc(100% - 70px);
+    left: 0;
+		background-color: var(--color-white);
+  }
+
+  .open {
+    transform: translateX(0);
+  }
+	
+  .close {
+    transform: translateX(-100%);
+  }
 }
