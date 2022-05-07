@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PdfContent should match snapshot 1`] = `
+<div>
+  <a
+    class="a"
+    target="_blank"
+  >
+    Acesse o conteúdo
+  </a>
+</div>
+`;

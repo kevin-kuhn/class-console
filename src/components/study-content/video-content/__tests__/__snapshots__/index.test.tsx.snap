@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextContent should match snapshot 1`] = `
+<div>
+  <div
+    class="wrapper"
+  >
+    <iframe
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen=""
+      class="iframe"
+      frameborder="0"
+      src="https://www.youtube.com/embed/c79C_S0E4IQ"
+      title="YouTube video player"
+    />
+  </div>
+</div>
+`;
