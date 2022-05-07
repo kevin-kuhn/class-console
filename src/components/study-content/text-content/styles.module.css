@@ -5,6 +5,7 @@
 .wrapper span p {
 	text-indent: 32px;
 	margin: 8px 0;
+	word-break: break-all;
 }
 
 .wrapper span img {
@@ -22,8 +23,4 @@
   .wrapper span img {
     width: 260px;
   }
-
-	.wrapper span p {
-		word-break: break-all;
-	}
 }
