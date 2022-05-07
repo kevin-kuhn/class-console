@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import { useClass } from '../../contexts/ClassContext'
 import { useStudyContent } from '../../hooks/useStudyContent'
 
@@ -12,7 +14,6 @@ import ExerciseContent from './exercise-content'
 import { IExercice, IPdf, IPrimaryChildren, IText, IVideo } from '../../models'
 
 import { Loader } from '../icons'
-import { useEffect } from 'react'
 
 interface Props {
   studyItemDefault: IPrimaryChildren

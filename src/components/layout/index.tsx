@@ -16,6 +16,10 @@ interface Props {
 const Layout: React.FC<Props> = ({ meta, studyList, children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+	const onChangeStudy = () => {
+		setIsMenuOpen(isMenuOpen => !isMenuOpen)
+	}
+
   return (
     <>
       <Head>
@@ -27,7 +31,7 @@ const Layout: React.FC<Props> = ({ meta, studyList, children }) => {
       <header className={styles.header}>
         <span
           className={styles.hamburguer}
-          onClick={() => setIsMenuOpen(isMenuOpen => !isMenuOpen)}
+          onClick={onChangeStudy}
         >
           <HamburguerIcon size={32} />
         </span>
@@ -41,7 +45,7 @@ const Layout: React.FC<Props> = ({ meta, studyList, children }) => {
             isMenuOpen ? styles.open : styles.close
           }`}
         >
-          <StudyList items={studyList} />
+          <StudyList items={studyList} onChangeStudy={onChangeStudy} />
         </aside>
         <main className={styles.main}>{children}</main>
       </section>

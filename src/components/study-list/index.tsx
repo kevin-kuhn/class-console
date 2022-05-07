@@ -9,11 +9,17 @@ import styles from './styles.module.css'
 
 interface Props {
   items: IPrimaryChildren[]
+	onChangeStudy: () => void
 }
 
-const StudyList: React.FC<Props> = ({ items }) => {
+const StudyList: React.FC<Props> = ({ items, onChangeStudy }) => {
   const { RESOLVE_ICONS } = useStudyListIcons()
   const { currentStudy, handleCurrentStudy, isStudyDone } = useClass()
+
+	const handleChangeStudy = (title: string) => {
+		onChangeStudy()
+		handleCurrentStudy(title)
+	}
 
   return (
     <ul className={styles.ul}>
@@ -23,7 +29,7 @@ const StudyList: React.FC<Props> = ({ items }) => {
           className={`${styles.li} ${
             currentStudy?.title == item.title ? styles.active : ''
           }`}
-          onClick={() => handleCurrentStudy(item.title)}
+          onClick={() => handleChangeStudy(item.title)}
           suppressHydrationWarning
         >
           <p className={styles.p}>
