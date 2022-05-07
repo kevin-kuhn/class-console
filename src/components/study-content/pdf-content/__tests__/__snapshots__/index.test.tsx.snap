@@ -4,6 +4,7 @@ exports[`PdfContent should match snapshot 1`] = `
 <div>
   <a
     class="a"
+    rel="noreferrer"
     target="_blank"
   >
     Acesse o conteúdo
