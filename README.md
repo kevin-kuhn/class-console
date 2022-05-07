@@ -1,6 +1,6 @@
 <div align="center" id="top"> 
 
-  <a href="https://class-console-5dc3gyu6h-kevin-kuhn.vercel.app/">Demo</a>
+  <a href="https://class-console.vercel.app/aula/1/">Demo</a>
 </div>
 
 <h1 align="center">Console de Aulas</h1>
