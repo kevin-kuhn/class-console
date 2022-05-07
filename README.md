@@ -95,6 +95,9 @@ $ yarn
 $ yarn dev
 
 # O servidor irá inicializar em <http://localhost:3000>
+
+# Inicie os testes do projeto
+$ yarn test
 ```
 
 Made with :heart: by <a href="https://github.com/kevin-kuhn" target="_blank">Kevin Kuhn</a>
