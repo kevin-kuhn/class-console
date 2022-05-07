@@ -1,98 +1,104 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Web Course" />
 
-  &#xa0;
-
-  <!-- <a href="https://webcourse.netlify.app">Demo</a> -->
+  <a href="https://webcourse.netlify.app">Demo</a>
 </div>
 
-<h1 align="center">Web Course</h1>
+<h1 align="center">Console de Aulas</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/web-course?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/kevin-kuhn/web-course?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/web-course?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/kevin-kuhn/web-course?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/web-course?color=56BEB8">
-
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/web-course?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/web-course?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/web-course?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/web-course?color=56BEB8" /> -->
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/kevin-kuhn/web-course?color=56BEB8">
 </p>
 
-<!-- Status -->
-
-<!-- <h4 align="center"> 
-	🚧  Web Course 🚀 Under construction...  🚧
-</h4> 
-
-<hr> -->
-
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
   <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#bricks-arquitetura">Arquitetura</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-iniciando">Iniciando</a> &#xa0; | &#xa0;
+  <a href="https://github.com/kevin-kuhn" target="_blank">Autor</a>
 </p>
 
 <br>
 
-## :dart: About ##
+## :dart: Sobre ##
 
-Describe your project
+Aplicação desenvolvida para servir como um um console/lista de estudos. Estudos separados em: vídeo, texto ou exercício.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+- Lista de estudos
+- Apresentação de um conteúdo completo
+- Cada item da lista de estudos contém um identificador do seu tipo (vídeo, texto e exercício)
+- Ao clicar em um item da lista de estudos o seu conteúdo relacionado é mostrado para o estudante
+- É sinalizado na lista de estudos quando um conteúdo já foi consumido (respondido/assistido)
+- Quando a página é carregada, a lista de estudos mantem a sinalização de quais conteúdos já foram consumidos (respondido/assistido)
+- Um exercício tem a possibilidade de seleção de uma alternativa
+- Após a seleção da alternativa o estudante pode "VER A CORREÇÃO"
 
-## :rocket: Technologies ##
+## :rocket: Tecnologias ##
 
-The following tools were used in this project:
+As seguintes tecnologias foram utilizandas neste projeto:
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
+	- Adiciona tipos ao projeto.
+- [Next.js](https://nextjs.org/)
+	- SSG e SSR. Performance e SEO.
+- [SWR](https://swr.vercel.app/)
+	- Controle e cacheamento de requisições.
+- [Axios](https://axios-http.com/ptbr/docs/intro/)
+	- Fetcher de requisições.
+- [Jest](https://jestjs.io/pt-BR/)
+	- Adiciona testes ao projeto.
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+	- Testes de componentes React.
+- [Isomorphic DOMPurify](https://www.npmjs.com/package/isomorphic-dompurify)
+	- Segurança. Limpeza de strings HTML antes de serem renderizadas.
 
-## :white_check_mark: Requirements ##
+## :bricks: Arquitetura ##
+    .
+    ├── ...
+    ├── src                    
+    │   ├── components          		# Componentes gerais da aplicação
+    │   	 ├── ...
+    │   	 ├── layout
+    │   	 	├── __tests__		# Testes específicos do componente
+    │   	 	├── index.tsx		# Core do componente
+    │   	 	└── styles.module.css	# Estilização em módulo do componente
+    │   	 └── ...
+    │   ├── contexts  
+    │   	 ├── ClassContext		# Controle dos casos de uso gerais da aplicação
+    │   ├── enums   			# Centralização de variáveis únicas da API
+    │   ├── hooks   			# Casos de uso específicos de um, ou mais componentes
+    │   ├── models   			# Contratos da API
+    │   ├── pages   			# Páginas da aplicação
+    │   ├── styles   			# Estilos globais da aplicação
+    │   └── test                		# Configuração geral de testes
+    └── ...
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
-
-## :checkered_flag: Starting ##
+## :checkered_flag: Iniciando ##
 
 ```bash
-# Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/web-course
+# Clone esse projeto
+$ git clone https://github.com/kevin-kuhn/web-course
 
-# Access
+# Acesse
 $ cd web-course
 
-# Install dependencies
+# Instale as dependencias
 $ yarn
 
-# Run the project
-$ yarn start
+# Inicie o projetoo
+$ yarn dev
 
-# The server will initialize in the <http://localhost:3000>
+# O servidor irá inicializar em <http://localhost:3000>
 ```
 
-## :memo: License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
-
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/kevin-kuhn" target="_blank">Kevin Kuhn</a>
 
 &#xa0;
 
-<a href="#top">Back to top</a>
+<a href="#top">Voltar ao topo</a>
