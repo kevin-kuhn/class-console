@@ -3,7 +3,7 @@
   <a href="https://class-console.vercel.app/aula/1/">Demo</a>
 </div>
 
-<h1 align="center">Console de Aulas</h1>
+<h1 align="center">Class Console</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/kevin-kuhn/web-course?color=56BEB8">
@@ -14,89 +14,89 @@
 </p>
 
 <p align="center">
-  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
   <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
-  <a href="#bricks-arquitetura">Arquitetura</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-iniciando">Iniciando</a> &#xa0; | &#xa0;
-  <a href="https://github.com/kevin-kuhn" target="_blank">Autor</a>
+  <a href="#rocket-stack">Stack</a> &#xa0; | &#xa0;
+  <a href="#bricks-architecture">Architecture</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
+  <a href="https://github.com/kevin-kuhn" target="_blank">Author</a>
 </p>
 
 <br>
 
-## :dart: Sobre ##
+## :dart: About ##
 
-Aplicação desenvolvida para servir como um um console/lista de estudos. Estudos separados em: vídeo, texto ou exercício.
+Application developed to serve as a console/study list. Separate studies in: video, text or exercise.
 
 ## :sparkles: Features ##
 
-- Lista de estudos
-- Apresentação de um conteúdo completo
-- Cada item da lista de estudos contém um identificador do seu tipo (vídeo, texto e exercício)
-- Ao clicar em um item da lista de estudos o seu conteúdo relacionado é mostrado para o estudante
-- É sinalizado na lista de estudos quando um conteúdo já foi consumido (respondido/assistido)
-- Quando a página é carregada, a lista de estudos mantem a sinalização de quais conteúdos já foram consumidos (respondido/assistido)
-- Um exercício tem a possibilidade de seleção de uma alternativa
-- Após a seleção da alternativa o estudante pode "VER A CORREÇÃO"
+- List of studies
+- Presentation of a complete content (each study)
+- Each study list item contains an identifier of its type (video, text and exercise)
+- When clicking on an item in the study list its related content is shown to the student
+- It is flagged in the list of studies when a content has already been consumed (answered/watched)
+- When the page is loaded, the list of studies keeps track of which content has already been consumed (answered/watched)
+- An exercise has the possibility of selecting an alternative
+- After selecting the alternative, the student can "SEE THE CORRECTION"
 
-## :rocket: Tecnologias ##
+## :rocket: Stack ##
 
-As seguintes tecnologias foram utilizandas neste projeto:
+The following stacks were used in this project:
 
 - [TypeScript](https://www.typescriptlang.org/)
-	- Adiciona tipos ao projeto.
+	- Adds types to the project.
 - [Next.js](https://nextjs.org/)
 	- SSG e SSR. Performance e SEO.
 - [SWR](https://swr.vercel.app/)
-	- Controle e cacheamento de requisições.
+	- Control and caching of requests.
 - [Axios](https://axios-http.com/ptbr/docs/intro/)
-	- Fetcher de requisições.
+	- Fetcher.
 - [Jest](https://jestjs.io/pt-BR/)
-	- Adiciona testes ao projeto.
+	- Adds tests to the project.
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-	- Testes de componentes React.
+	- React components texts.
 - [Isomorphic DOMPurify](https://www.npmjs.com/package/isomorphic-dompurify)
-	- Segurança. Limpeza de strings HTML antes de serem renderizadas.
+	- Safety. Cleaning up HTML strings before being rendered.
 
-## :bricks: Arquitetura ##
+## :bricks: Architecture ##
     .
     ├── ...
     ├── src                    
-    │   ├── components          		# Componentes gerais da aplicação
+    │   ├── components          		# General application components
     │   	 ├── ...
     │   	 ├── layout
-    │   	 	├── __tests__		# Testes específicos do componente
-    │   	 	├── index.tsx		# Core do componente
-    │   	 	└── styles.module.css	# Estilização em módulo do componente
+    │   	 	├── __tests__		# Component-specific tests
+    │   	 	├── index.tsx		# Component core
+    │   	 	└── styles.module.css	# Component in module style
     │   	 └── ...
     │   ├── contexts  
-    │   	 ├── ClassContext		# Controle dos casos de uso gerais da aplicação
-    │   ├── enums   			# Centralização de variáveis únicas da API
-    │   ├── hooks   			# Casos de uso específicos de um, ou mais componentes
-    │   ├── models   			# Contratos da API
-    │   ├── pages   			# Páginas da aplicação
-    │   ├── styles   			# Estilos globais da aplicação
-    │   └── test                		# Configuração geral de testes
+    │   	 ├── ClassContext		# Use cases of application
+    │   ├── enums   			# Centralization of unique API variables
+    │   ├── hooks   			# Specific use cases of one or more components
+    │   ├── models   			# API contracts
+    │   ├── pages   			# Application pages
+    │   ├── styles   			# Global styles
+    │   └── test                		# General tests configurations
     └── ...
 
-## :checkered_flag: Iniciando ##
+## :checkered_flag: Starting ##
 
 ```bash
-# Clone esse projeto
+# Clone this repo
 $ git clone https://github.com/kevin-kuhn/web-course
 
-# Acesse
+# Access
 $ cd web-course
 
-# Instale as dependencias
+# Install deps
 $ yarn
 
-# Inicie o projetoo
+# Start application
 $ yarn dev
 
-# O servidor irá inicializar em <http://localhost:3000>
+# The server will run in <http://localhost:3000>
 
-# Inicie os testes do projeto
+# Start project tests
 $ yarn test
 ```
 
@@ -104,4 +104,4 @@ Made with :heart: by <a href="https://github.com/kevin-kuhn" target="_blank">Kev
 
 &#xa0;
 
-<a href="#top">Voltar ao topo</a>
+<a href="#top">Back to top</a>
